@@ -8,7 +8,7 @@ from posts.models import Post, Group
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all().order_by('pub_date')
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly,)
 
